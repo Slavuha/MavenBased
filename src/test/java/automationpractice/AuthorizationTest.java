@@ -63,4 +63,13 @@ public class AuthorizationTest extends BaseTest {
 
         Assertions.assertEquals("name lasr", username, "user wa not logged in");
     }
+ //Bro tut ya napisal)
+    @Test
+    public void summerDresess(){
+        driver.get(PropertyReader.BASEURL);
+        HomePage homePage = new HomePage(driver).waitOnPage();
+        homePage.waitOnPage();
+        BaseTest baseTest = new BaseTest();
+        baseTest.navigateToSummerDresses();
+    }
 }
