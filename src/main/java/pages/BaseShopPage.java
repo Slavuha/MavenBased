@@ -36,6 +36,10 @@ public class BaseShopPage {
         List<WebElement> logIn = driver.findElements(signIn);
         return logIn.isEmpty();
     }
+    public BaseShopPage clickOnCart(){
+        driver.findElement(shoopingCart).click();
+    return this;
+    }
 
     public BaseShopPage waitOnPage() {
         WebDriverWait wait = new WebDriverWait(driver, 15);

@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pages.BaseShopPage;
 import pages.MyStorePage;
 import utils.PropertyReader;
 
@@ -27,6 +28,8 @@ public class BaseTest {
     By  dressLink = By.xpath("//div[@class=\"left-block\"]");
     By  addToFavoriteLink = By.xpath("//a[@class=\"addToWishlist wishlistProd_5\"]");
     By buttonLintToMyAccount = By.cssSelector("a.account");
+    By myKartButton = By.xpath("//a [@title=\"View my shopping cart\"]");
+    By shoopingCart = By.xpath("//a [@title=\\\"View my shopping cart\\");
 
 
     protected WebDriver driver;
@@ -109,6 +112,11 @@ public class BaseTest {
     public MyStorePage clickToMyAccount(){
         WebElement clickToMyAccount = driver.findElement(buttonLintToMyAccount);
         return new MyStorePage(driver);
+    }
+
+    public MyStorePage clickOnCart(){
+        driver.findElement(shoopingCart).click();
+return new MyStorePage(driver);
     }
 
 
